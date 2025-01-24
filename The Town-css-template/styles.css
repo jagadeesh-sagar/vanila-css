@@ -84,6 +84,7 @@ ol {
   height: 100vh;
   display: flex;
   flex-direction: column;
+
   /* justify-content: space-between; */
 }
 
@@ -148,4 +149,136 @@ ol {
 
 .down-arrow:hover .icon-circle {
   color: #ffffff;
+}
+
+/**********************************************/
+/***************INTRODUCTION******************/
+
+.introduction {
+  padding-top: 14.2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 120rem;
+  margin: 0 auto;
+  gap: 4.4rem;
+}
+
+.street-image {
+  border-radius: 1rem;
+}
+
+.introduction h1 {
+  font-size: 4.4rem;
+  font-weight: 400;
+  color: #3eb1c5;
+}
+
+.introduction p {
+  font-size: 2rem;
+  color: #8f8f8f;
+  line-height: 1.4;
+  /* margin-bottom: 2rem; */
+}
+
+.introduction-content {
+  margin-left: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.btn {
+  padding: 1.6rem 3.2rem;
+  font-size: 2rem;
+  background-color: #3eb1c5;
+  color: #ffff;
+  display: inline-block;
+  border-radius: 5rem;
+}
+
+.btn:link,
+.btn:visited {
+  color: #ffffff;
+  transition: all 0.3s;
+  font-weight: 400;
+}
+
+.btn:hover,
+.btnactive {
+  transition: all 0.5s;
+  background-color: #70c0ce;
+  border: none;
+}
+
+/***************************************/
+/****************** BENEFITS ******************/
+
+.benefits {
+  padding-top: 14.2rem;
+}
+
+.benefits-container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.benefits-container ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 2.4rem;
+}
+
+.benefits-icon {
+  font-size: 6.4rem;
+  color: #3eb1c5;
+  margin-bottom: 3.2rem;
+}
+
+.benefits li {
+  justify-items: center;
+}
+
+.benefits h2 {
+  font-size: 2.4rem;
+  color: #3eb1c5;
+  margin-bottom: 3.2rem;
+}
+
+.benefits p {
+  font-size: 1.8rem;
+  color: #8f8f8f;
+  line-height: 1.4;
+}
+
+/***************************************/
+/****************** BENEFITS ******************/
+
+.qoute {
+  padding-top: 14.8rem;
+}
+
+.qoute-container {
+  width: 120rem;
+
+  margin: 0 auto;
+}
+
+.qoute p {
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: #3eb1c5;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+.qoute blockquote {
+  font-style: italic;
+  color: #8f8f8f;
+  text-align: center;
+  font-size: 1.8rem;
+  /* max-width: 60rem; */
+  margin: 0 9.6rem;
 }
