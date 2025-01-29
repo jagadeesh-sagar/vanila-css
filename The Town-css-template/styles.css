@@ -253,7 +253,7 @@ ol {
   line-height: 1.4;
 }
 
-/***************************************/
+/**********************************************/
 /****************** BENEFITS ******************/
 
 .qoute {
@@ -281,4 +281,267 @@ ol {
   font-size: 1.8rem;
   /* max-width: 60rem; */
   margin: 0 9.6rem;
+}
+
+/**********************************************/
+/****************** images ******************/
+
+.images {
+  padding: 14.8rem 0;
+}
+
+.images-container {
+  width: 120rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  gap: 2.5rem;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.image-container img {
+  width: 22rem;
+  height: 32rem;
+  transition: all 0.4s;
+  /* position: relative; */
+  border-radius: 5px;
+}
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container:hover {
+  filter: brightness(0.7) saturate(1.2);
+  /* transform: scale(1.1); */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.4)
+  );
+  color: #fff;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  /* flex-direction: column; */
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1.6rem;
+  transform: translateY(-100%);
+}
+
+.overlay p {
+  margin-bottom: 2.4rem;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.overlay::after {
+  content: "";
+  width: 100%;
+  height: 1.4rem;
+  background-color: #3eb1c5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleY(0);
+  transition: transform 0.4s ease-out;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-container:hover .overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.image-container:hover .overlay::after {
+  transform: scaleX(1);
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.4)
+  );
+  color: #fff;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1.6rem;
+}
+
+.overlay p {
+  margin-bottom: 3rem;
+}
+
+.overlay h2 {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-color: #3eb1c5;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+} */
+
+/**********************************************/
+/****************** footer  ******************/
+
+.footer {
+  /* padding: 14.8rem 0; */
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.contact-us p {
+  padding-top: 3.4rem;
+  font-size: 4.4rem;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+  margin-bottom: 4.4rem;
+}
+
+.footer-text {
+  font-size: 1.8rem;
+  margin: 3.4rem 0;
+  color: #fff;
+}
+
+.contact-us {
+  /* display: inline-block; */
+  position: relative;
+  padding-top: 9.6rem;
+}
+
+.underline {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 20%;
+  height: 1rem;
+  background-color: #fff;
+}
+
+.communication {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.icons-section {
+  display: flex;
+}
+
+.icons-class {
+  display: flex;
+  gap: 2.4rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.icons-class p {
+  font-size: 1.8rem;
+  align-self: center;
+  color: inherit;
+}
+
+.footer-icons {
+  font-size: 5.4rem;
+  color: #fff;
+  margin: 3.4rem 0;
+  align-self: center;
+  transition: all 0.3s;
+}
+
+.icons-class:hover {
+  color: #3eb1c5;
+}
+
+.icons-class:hover .footer-icons {
+  color: #3eb1c5;
+}
+
+.cta-section {
+  display: flex;
+  gap: 3.2rem;
+  align-self: start;
+  height: 2.4rem;
+  padding-top: 4.4rem;
+}
+
+.cta-section input {
+  padding: 2.4rem;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.081);
+}
+
+.cta-section input::placeholder {
+  color: #fff;
+}
+
+.cta {
+  height: 4.4rem;
+  width: 20%;
+  border-radius: 5px;
+  border: 2px #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.cta:hover {
+  background-color: rgba(255, 255, 255, 0.717);
+}
+
+.copyright {
+  padding: 14.4rem 0 4.4rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
