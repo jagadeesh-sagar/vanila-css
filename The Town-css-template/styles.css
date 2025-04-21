@@ -48,9 +48,29 @@ ol {
   justify-content: space-between;
   font-size: 2.4rem;
   padding: 0 12rem;
-  /* margin: 0 auto; */
+
   height: 9.6rem;
   align-items: center;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.sticky .logo,
+.sticky .main-nav-link {
+  color: #333; /* Dark text color on white background */
 }
 
 .logo {
@@ -81,7 +101,7 @@ ol {
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 
@@ -154,8 +174,13 @@ ol {
 /**********************************************/
 /***************INTRODUCTION******************/
 
+/* .introduction {
+  padding-top: 14.2rem;
+} */
+
 .introduction {
   padding-top: 14.2rem;
+  margin-top: 9.6rem;
 }
 
 .container {
