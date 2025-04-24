@@ -48,30 +48,23 @@ ol {
   justify-content: space-between;
   font-size: 2.4rem;
   padding: 0 12rem;
-
+  z-index: 100;
   height: 9.6rem;
   align-items: center;
 }
 
-.sticky .header {
+.header.sticky {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Semi-transparent white background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  z-index: 1000; /* Ensure it stays above other content */
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 7.4rem;
+  /* color: #333; */
 }
 
-.sticky .logo,
+/* .sticky .logo,
 .sticky .main-nav-link {
-  color: #333; /* Dark text color on white background */
-}
+  color: #333; 
+} */
 
 .logo {
   color: #ffffff;
@@ -84,6 +77,26 @@ ol {
   gap: 3.2rem;
 }
 
+.header.sticky .logo {
+  color: #706e6e;
+}
+
+.header.sticky .main-nav-link:link,
+.header.sticky .main-nav-link:visited {
+  color: #706e6e;
+  transition: all 0.3s;
+  font-weight: 400;
+}
+
+.header.sticky .main-nav-link:hover,
+.header.sticky .main-nav-link:active {
+  transition: all 0.5s;
+  color: #4dddf6;
+}
+
+.header.sticky .main-nav-link.active {
+  color: #4dddf6;
+}
 .main-nav-link:link,
 .main-nav-link:visited {
   color: #ffffff;
