@@ -31,7 +31,7 @@ const stickyNav = function (entries) {
   });
 };
 const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+// console.log(navHeight);
 // const navHeight = 90;
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
@@ -75,5 +75,49 @@ allsections.forEach((sectionId) => {
     sectionObserver.observe(section);
   } else {
     console.warn(`Section with class ${sectionId} not found.`);
+  }
+});
+
+// slider
+
+const sildes = document.querySelector(".images-container");
+const dots = document.querySelector(".dots");
+const slide = document.querySelectorAll(".image-container");
+const maxSlide = slide.length;
+
+const nextSlides = function (slider) {
+  slide.forEach((s, i) => {
+    s.style.transform = `translateX(-${105 * slider}%)`;
+  });
+};
+
+const createDots = function (i) {
+  dots.insertAdjacentHTML(
+    "beforeend",
+    `<button class= "dots__dot " data-slide="${i}" ></button>`
+  );
+};
+
+for (let i = 0; i < maxSlide / 2; i++) {
+  createDots(i);
+}
+
+const activateDots = function (i) {
+  document
+    .querySelectorAll(".dots__dot")
+    .forEach((dots) => dots.classList.remove("dots__dot--active"));
+  document
+    .querySelectorAll(`.dots__dot[data-slide="${i}"]`)
+    .forEach((dots) => dots.classList.add("dots__dot--active"));
+};
+
+activateDots(0);
+
+dots.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots__dot")) {
+    const slide = Number(e.target.dataset.slide);
+    console.log(slide);
+    activateDots(slide);
+    nextSlides(slide);
   }
 });
